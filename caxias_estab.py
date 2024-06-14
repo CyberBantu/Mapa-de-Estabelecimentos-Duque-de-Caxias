@@ -8,6 +8,8 @@ import plotly.express as px
 
 def main():
     # Carregar dados
+    st.set_page_config(layout="wide")
+
     st.title('Analise espacial de estabelecimentos e moradias no Municipio de Duque de Caxias')
     end = pd.read_csv('base_completa_estabelecimento.csv', sep=';')
     caxias = geopandas.read_file('mapa_caxias.shp')
