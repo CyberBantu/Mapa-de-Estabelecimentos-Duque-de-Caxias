@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import geopandas as gpd
+import geopandas
 from shapely.geometry import Point
 import matplotlib.pyplot as plt
 from geopandas import GeoDataFrame
@@ -10,7 +10,7 @@ import plotly.express as px
 # Carregar dados
 st.title('Analise espacial de estabelecimentos e moradias no Municipio de Duque de Caxias')
 end = pd.read_csv('base_completa_estabelecimento.csv', sep=';')
-caxias = gpd.read_file('mapa_caxias.shp')
+caxias = geopandas.read_file('mapa_caxias.shp')
 
 # Converter dados de endereço em GeoDataFrame
 geometry = [Point(xy) for xy in zip(end['LONGITUDE'], end['LATITUDE'])]
