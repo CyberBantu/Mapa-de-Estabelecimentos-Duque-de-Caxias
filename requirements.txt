@@ -3,3 +3,5 @@ pandas
 shapely
 fiona
 pyproj
+matplotlib
+plotly
